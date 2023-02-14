@@ -13,6 +13,7 @@ Library    RPA.PDF
 Library    RPA.Archive
 Library    Dialogs
 Library    RPA.Dialogs
+Library    RPA.Robocorp.Vault
 
 
 *** Variables ***
@@ -20,6 +21,9 @@ ${OUTPUT_DIR}    ${CURDIR}${/}output
 
 *** Tasks ***
 Order robots from RobotSpareBin Industries Inc
+    ${secret}=    Get Secret    credentials
+    Log    ${secret}[string_one]
+    Log    ${secret}[String_two]
     Input form dialog
     Open the robot order website
     ${orders}=    Get orders

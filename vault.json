@@ -1,0 +1,6 @@
+{
+    "credentials": {
+      "string_one": "some-string",
+      "String_two": "some-strin_two"
+    }
+  }
